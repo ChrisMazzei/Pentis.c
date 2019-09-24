@@ -71,10 +71,8 @@ int main(int argc, char *argv[])
 		}
 		else if(P == 'M') {
 			char mP[4][4] = {{' ', ' ', '#', ' '}, {' ', '#', '#', ' '}, {'#', '#', ' ', ' '}, {' ', ' ', ' ', ' '}};
-			if(R % 4 == 0)
+			if(R % 4 == 0 || R % 4 == 3)
 				S++;
-			else if(R % 4 == 1 || R % 4 == 3)
-				S--;
 			rotatePiece(mP, R % 4);
 			addPiece(well, mP, S);
 		}
